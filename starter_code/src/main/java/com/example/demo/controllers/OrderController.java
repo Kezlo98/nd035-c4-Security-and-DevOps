@@ -2,6 +2,7 @@ package com.example.demo.controllers;
 
 import java.util.List;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,6 +20,7 @@ import com.example.demo.model.persistence.repositories.UserRepository;
 
 @RestController
 @RequestMapping("/api/order")
+@Slf4j
 public class OrderController {
 	
 	
@@ -31,21 +33,29 @@ public class OrderController {
 	
 	@PostMapping("/submit/{username}")
 	public ResponseEntity<UserOrder> submit(@PathVariable String username) {
+		log.info("Start submit order with username: {}", username);
 		User user = userRepository.findByUsername(username);
 		if(user == null) {
+			log.error("Can't not find user {}, please help to check again", username);
+			log.info("End submit order");
 			return ResponseEntity.notFound().build();
 		}
 		UserOrder order = UserOrder.createFromCart(user.getCart());
 		orderRepository.save(order);
+		log.info("End submit order");
 		return ResponseEntity.ok(order);
 	}
 	
 	@GetMapping("/history/{username}")
 	public ResponseEntity<List<UserOrder>> getOrdersForUser(@PathVariable String username) {
+		log.info("Begin getOrdersForUser with username: {}", username );
 		User user = userRepository.findByUsername(username);
 		if(user == null) {
+			log.error("Can't not find user {}, please help to check again", username);
+			log.info("End getOrdersForUser");
 			return ResponseEntity.notFound().build();
 		}
+		log.info("End getOrdersForUser");
 		return ResponseEntity.ok(orderRepository.findByUser(user));
 	}
 }

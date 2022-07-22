@@ -1,0 +1,38 @@
+2022-07-22 14:01:20,676 INFO com.example.demo.SareetaApplication [main] Starting SareetaApplication on DESKTOP-9VK2K07 with PID 4264 (D:\Workspace\Java\Udacity\finalProject\nd035-c4-Security-and-DevOps\starter_code\target\classes started by pc in D:\Workspace\Java\Udacity\finalProject\nd035-c4-Security-and-DevOps)
+2022-07-22 14:01:20,692 INFO com.example.demo.SareetaApplication [main] No active profile set, falling back to default profiles: default
+2022-07-22 14:01:25,224 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2022-07-22 14:01:25,225 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.19]
+2022-07-22 14:01:25,469 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2022-07-22 14:01:25,909 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2022-07-22 14:01:26,085 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2022-07-22 14:01:26,166 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2022-07-22 14:01:26,279 INFO org.hibernate.Version [main] HHH000412: Hibernate Core {5.3.10.Final}
+2022-07-22 14:01:26,282 INFO org.hibernate.cfg.Environment [main] HHH000206: hibernate.properties not found
+2022-07-22 14:01:26,682 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2022-07-22 14:01:26,944 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-07-22 14:01:30,046 INFO com.example.demo.SareetaApplication [main] Started SareetaApplication in 10.564 seconds (JVM running for 15.073)
+2022-07-22 14:33:17,941 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-22 14:33:20,289 INFO com.example.demo.controllers.UserController [http-nio-8080-exec-1] Begin createUser with request: {"username":"testUserName","password":"testPassword","confirmPassword":"testConfirmPassword"}
+2022-07-22 14:33:20,295 ERROR com.example.demo.controllers.UserController [http-nio-8080-exec-1] Error - Either length is less than 7 or pass and conf pass do not match. Unable to create 
+2022-07-22 14:33:50,849 INFO com.example.demo.controllers.UserController [http-nio-8080-exec-4] Begin createUser with request: {"username":"testUserName","password":"testPassword","confirmPassword":"testConfirmPassword"}
+2022-07-22 14:33:50,850 ERROR com.example.demo.controllers.UserController [http-nio-8080-exec-4] Error - Either length is less than 7 or pass and conf pass do not match. Unable to create 
+2022-07-22 14:33:54,833 INFO com.example.demo.controllers.UserController [http-nio-8080-exec-6] Begin createUser with request: {"username":"testUserName","password":"testPassword","confirmPassword":"testPassword"}
+2022-07-22 14:33:55,373 INFO com.example.demo.controllers.UserController [http-nio-8080-exec-6] End createUser
+2022-07-22 14:35:17,438 INFO org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [http-nio-8080-exec-8] HHH000397: Using ASTQueryTranslatorFactory
+2022-07-22 14:37:14,757 INFO com.example.demo.controllers.UserController [http-nio-8080-exec-6] Begin findByUserName with username: 1
+2022-07-22 14:37:14,762 INFO com.example.demo.controllers.UserController [http-nio-8080-exec-6] End findByUserName
+2022-07-22 14:37:29,099 INFO com.example.demo.controllers.UserController [http-nio-8080-exec-4] Begin findById with id: 1
+2022-07-22 14:37:48,851 INFO com.example.demo.controllers.UserController [http-nio-8080-exec-8] Begin findByUserName with username: testUserName
+2022-07-22 14:37:48,855 INFO com.example.demo.controllers.UserController [http-nio-8080-exec-8] End findByUserName
+2022-07-22 14:52:55,508 INFO com.example.demo.controllers.ItemController [http-nio-8080-exec-6] Begin getItemById with id: 1
+2022-07-22 14:53:08,304 INFO com.example.demo.controllers.ItemController [http-nio-8080-exec-4] Begin getItemById with id: 2
+2022-07-22 14:53:16,440 INFO com.example.demo.controllers.ItemController [http-nio-8080-exec-8] Begin getItemsByName with name: Square Widget
+2022-07-22 14:53:27,476 INFO com.example.demo.controllers.ItemController [http-nio-8080-exec-10] Begin getItemsByName with name: Round Widget
+2022-07-22 14:55:03,044 INFO com.example.demo.controllers.CartController [http-nio-8080-exec-3] Begin addTocart with request: {"username":"testUserName","itemId":1,"quantity":2}
+2022-07-22 14:55:03,112 INFO com.example.demo.controllers.CartController [http-nio-8080-exec-3] End addTocart
+2022-07-22 14:55:24,678 INFO com.example.demo.controllers.CartController [http-nio-8080-exec-2] Begin addTocart with request: {"username":"testUserName","itemId":2,"quantity":4}
+2022-07-22 14:55:24,704 INFO com.example.demo.controllers.CartController [http-nio-8080-exec-2] End addTocart
+2022-07-22 14:55:44,889 INFO com.example.demo.controllers.CartController [http-nio-8080-exec-1] Begin removeFromcart with request: {"username":"testUserName","itemId":2,"quantity":2}
+2022-07-22 14:55:44,906 INFO com.example.demo.controllers.CartController [http-nio-8080-exec-1] End removeFromcart
